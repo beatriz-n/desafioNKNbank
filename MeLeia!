@@ -22,5 +22,5 @@ CREATE TABLE infos (
 obs: eu iria colocar o nome da tabela como Lend mas parece que é uma palavra reservada no mysql.
 Estava tentando fazer uma api usando express e node, não deu tempo de completar o que eu previa,
 tive varios problemas de codigo no caminho, bom, aqui tem o banco conectado a pagina em html e css,
-, servidor node, coloquei uma mascara de telefone, responsividade... Infelizmente a pagina ainda não
- alimenta o banco de dados e não coloquei as validações como a idade abaixo de 18.
+servidor node, coloquei uma mascara de telefone, responsividade... Infelizmente a pagina ainda não
+alimenta o banco de dados e não coloquei as validações como a idade abaixo de 18.

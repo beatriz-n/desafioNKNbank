@@ -1,0 +1,24 @@
+baixe os pacotes do package.
+
+no terminal
+yarn sequelize db:migrate
+para criar o banco no mysql
+
+esta é a criação da tabela:
+
+CREATE TABLE infos (
+    id int NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    senha VARCHAR(100),
+    whatsapp VARCHAR(20),
+    datanascimento DATE,
+    datalog DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+obs: eu iria colocar o nome da tabela como Lend mas parece que é uma palavra reservada no mysql.
+Estava tentando fazer uma api usando express e node, não deu tempo de completar o que eu previa,
+tive varios problemas de codigo no caminho, bom, aqui tem o banco conectado a pagina em html e css,
+coloquei uma mascara de telefone, infelizmente a pagina ainda não alimenta o banco de dados e não coloquei
+as validações como a idade abaixo de 18.

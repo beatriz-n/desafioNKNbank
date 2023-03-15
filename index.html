@@ -17,44 +17,34 @@
           <a class="navbar-brand link-git" href="#">
             <img src="img\skull.jpg" alt="" width="70" height="70">
           </a>
-          <a style="color: rgb(181, 142, 142);" class="navbar-brand" href="#">
+          <a style="color: rgb(181, 142, 142);" class="navbar-brand" href="https://github.com/beatriz-n">
             Meu gitHub
           </a>
         </div>
       </nav>
 
         <div class="card">
-            <div class="alert alert-danger" role="alert">
+            <!-- <div class="alert alert-danger" role="alert">
                 Cheque os campos!
               </div>
               <div class="alert alert-danger" role="alert">
                 Hmmm, você não tem idade o suficiente, o minimo é 18!
-              </div>
-            <form class="row g-3 needs-validation" novalidate>
+              </div> -->
+            <form id="myForm" class="row g-3 needs-validation" method="POST" novalidate>
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="validationCustom01" required>
+                    <input type="text" class="form-control" id="validationCustom01"name="nome" required>
                     <div class="valid-feedback">
                         Gostei do nome!
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">Sobrenome</label>
-                    <input type="text" class="form-control" id="validationCustom02" required>
-                    <div class="valid-feedback">
-                        OK!
-                    </div>
+                    <label class="form-label">Telefone</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" onkeyup="handlePhone(event)" class="form-control">
                 </div>
                 <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">Telefone</label>
-                    <input type="tel" onkeyup="handlePhone(event)" class="form-control" id="validationCustom02" required>
-                    <div class="valid-feedback">
-                       Otimo :)
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">Idade</label>
-                    <input type="date" class="form-control" id="validationCustom02" required>
+                    <label for="validationCustom02" class="form-label">Data de Nascimento</label>
+                    <input  class="form-control" id="validationCustom02" name="datanascimento" required>
                     <div class="valid-feedback">
                        hmmm
                     </div>
@@ -64,8 +54,7 @@
                     <label for="validationCustomUsername" class="form-label">E-mail</label>
                     <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="validationCustomUsername"
-                            aria-describedby="inputGroupPrepend" required>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" name="email" required>
                         <div class="invalid-feedback">
                             Digite seu e-mail
                         </div>
@@ -75,7 +64,7 @@
                     <label for="validationCustomUsername" class="form-label">Valide o e-mail</label>
                     <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="validationCustomUsername"
+                        <input type="text" class="form-control"
                             aria-describedby="inputGroupPrepend" required>
                         <div class="invalid-feedback">
                             Digite seu e-mail
@@ -85,7 +74,7 @@
                 <div class="col-md-4">
                     <label for="validationCustomUsername" class="form-label">Senha</label>
                     <div class="input-group has-validation">
-                        <input type="password" class="form-control" id="validationCustomUsername"
+                        <input type="password" class="form-control" id="validationCustomUsername" name="senha"
                             aria-describedby="inputGroupPrepend" required>
                         <div class="invalid-feedback">
                             Digite sua senha
@@ -95,7 +84,7 @@
                 <div class="col-md-4">
                     <label for="validationCustomUsername" class="form-label">Valide a senha</label>
                     <div class="input-group has-validation">
-                        <input type="password" class="form-control" id="validationCustomUsername"
+                        <input type="password" class="form-control"
                             aria-describedby="inputGroupPrepend" required>
                         <div class="invalid-feedback">
                             Digite sua senha novamente
@@ -103,7 +92,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+                    <button class="btn btn-primary" value="gravar" id="gravar" name="gravar" type="submit">Enviar formulario</button>
                 </div>
             </form>
         </div>
@@ -111,3 +100,4 @@
 </body>
 
 </html>
+<!-- id="validationCustom02" -->

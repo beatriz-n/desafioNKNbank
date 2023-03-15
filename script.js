@@ -29,30 +29,3 @@
     value = value.replace(/(\d)(\d{4})$/,"$1-$2")
     return value
   }
-  const myForm = document.getElementById("myForm");
-  myForm.addEventListener('submit',gravar);
-// evita de fechar o formulario
-function gravar(e){
-  e.preventDefault();
-  const formData = new FormData(this);
-  const searchParams = new URLSearchParams();
-
-    for(const par of formData){
-      // incluir parametros dentro do formdata
-      searchParams.append(par[0],par[1],par[2],par[3],par[4]);
-    }
-// enviar informação atraves do request
-    fetch('cadastrousuario.php',{
-      method:'POST',
-      body:formData
-    }).then(function(response){
-      document.getElementById('nome').value=" ";
-      document.getElementById('datanascimento').value=" ";
-      document.getElementById('email').value=" ";
-      document.getElementById('senha').value=" ";
-      document.getElementById('whatsapp').value=" ";
-      return alert('OK');
-    }).catch(function(error){
-      console.log('error');
-    })
-  }
